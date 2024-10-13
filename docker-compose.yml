@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  serve-model:
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
