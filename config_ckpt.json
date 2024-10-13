@@ -1,0 +1,6 @@
+{
+    "model_urls": {
+        "resnet18_train_0030": "https://papereplbucket.s3.eu-west-3.amazonaws.com/simclr/resnet18_train_0030.pth.tar",
+        "resnet18_train_0100": "https://papereplbucket.s3.eu-west-3.amazonaws.com/simclr/resnet18_train_0100.pth.tar"
+    }
+}
