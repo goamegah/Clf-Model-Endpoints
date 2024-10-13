@@ -1,0 +1,4 @@
+{
+    "name": "mnist-resnet",
+    "implementation": "mlserver_resnet.MLServerResnet"
+}
