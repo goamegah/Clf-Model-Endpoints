@@ -1,6 +1,4 @@
-# Image-C-Model-Endpoints
-Different ways of implementing an API to serve an image classification model
-# FastAPI Application for Model Endpoints
+# MLServer Application for Model Endpoints
 
 This is a FastAPI application containerized using Docker and Docker Compose.
 
@@ -55,7 +53,7 @@ COPY . .
 EXPOSE 8000
 
 # Command to run the FastAPI application
-CMD ["uvicorn", "serve_model:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "serve_model:app", "--host", "0.0.0.0", "--port", "8003"]
 
 ```
 
@@ -69,7 +67,7 @@ services:
   serve-model:
     build: .
     ports:
-      - "8000:8000"
+      - "8003:8003"
     volumes:
       - .:/app
     environment:
@@ -91,7 +89,7 @@ To build and run the application using Docker directly, run:
 
 ```bash
 docker build -t server-model .
-docker run -p 8000:8000 serve-model
+docker run -p 8003:8003 serve-model
 ```
 
 
@@ -99,5 +97,5 @@ docker run -p 8000:8000 serve-model
 Once the container is running, you can access the FastAPI application at:
 
 ```txt
-http://localhost:8000
+http://localhost:8003
 ```
